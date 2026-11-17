@@ -1,0 +1,58 @@
+import { CharacterInfo } from '../types/game';
+
+export const CHARACTERS: CharacterInfo[] = [
+  {
+    id: 'dk',
+    name: 'Donkey Kong',
+    title: 'Rei da Selva e da Gravidade',
+    franchise: 'Donkey Kong Country',
+    description: 'O poderoso e lendário gorila dos trópicos, ostentando sua icônica gravata vermelha com iniciais "DK" em ouro e punhos demolidores.',
+    trait: 'Força Titânica dos Trópicos • Impacto esmagador em blocos misteriosos e estabilidade reforçada em aterrissagens',
+    badgeColor: '#78350f',
+  },
+  {
+    id: 'ash',
+    name: 'Red Treinador',
+    title: 'Mestre dos Monstros',
+    franchise: 'Pokémon Universe',
+    description: 'O lendário jovem de boné vermelho e colete azul, mestre em sintonizar com criaturas místicas.',
+    trait: 'Afinidade Elemental • Raio de atração de Pocket Pets e moedas ampliado em +50%',
+    badgeColor: '#ef4444',
+  },
+  {
+    id: 'link',
+    name: 'Herói do Tempo',
+    title: 'Guerreiro de Hyrule',
+    franchise: 'The Legend of Zelda',
+    description: 'Vestido com túnica verde clássica, gorro pontudo e espírito heróico portando o escudo nas costas.',
+    trait: 'Coragem da Triforce • Pulos com sustentação aerodinâmica e maior controle no ar',
+    badgeColor: '#10b981',
+  },
+  {
+    id: 'mario',
+    name: 'Super Encanador',
+    title: 'Campeão dos Encanamentos',
+    franchise: 'Super Mario',
+    description: 'Boina vermelha, macacão azul com botões dourados, bigode marcante e salto acrobático inconfundível.',
+    trait: 'Salto Supremo • Salto 15% mais alto e pontuação em dobro ao bater em blocos ?',
+    badgeColor: '#dc2626',
+  },
+  {
+    id: 'sonic',
+    name: 'Ouriço Supersônico',
+    title: 'O Raio Azul',
+    franchise: 'Sonic the Hedgehog',
+    description: 'Espinhos azuis aerodinâmicos, luvas brancas e sapatilhas vermelhas velozes como a luz.',
+    trait: 'Velocidade da Luz • Velocidade base +25% e efeito de Boost supersônico prolongado',
+    badgeColor: '#2563eb',
+  },
+  {
+    id: 'goku',
+    name: 'Guerreiro Saiyajin',
+    title: 'Defensor do Universo',
+    franchise: 'Dragon Ball',
+    description: 'Cabelo espetado volumoso e gi laranja com faixa azul marinho, emitindo uma poderosa aura de Ki.',
+    trait: 'Aura de Ki Cósmica • Desintegra glitches menores e transforma-se com super aura em boost',
+    badgeColor: '#ea580c',
+  },
+];

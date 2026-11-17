@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .glow-cyan {
+    box-shadow: 0 0 25px rgba(6, 182, 212, 0.45);
+  }
+  .glow-pink {
+    box-shadow: 0 0 25px rgba(236, 72, 153, 0.45);
+  }
+  .glow-purple {
+    box-shadow: 0 0 25px rgba(168, 85, 247, 0.45);
+  }
+  .glow-emerald {
+    box-shadow: 0 0 25px rgba(16, 185, 129, 0.45);
+  }
+  .text-glow-cyan {
+    text-shadow: 0 0 12px rgba(6, 182, 212, 0.7);
+  }
+  .text-glow-pink {
+    text-shadow: 0 0 12px rgba(236, 72, 153, 0.7);
+  }
+}
+
+/* Efeito sutil de linhas de varredura Cyberpunk Arcade */
+.scanlines {
+  background: linear-gradient(
+    rgba(18, 16, 16, 0) 50%, 
+    rgba(0, 0, 0, 0.25) 50%
+  ), linear-gradient(
+    90deg,
+    rgba(255, 0, 0, 0.03),
+    rgba(0, 255, 0, 0.01),
+    rgba(0, 0, 255, 0.03)
+  );
+  background-size: 100% 4px, 6px 100%;
+  pointer-events: none;
+}
+
+/* Prevenção de gestos nativos mobile indesejados */
+body {
+  touch-action: none;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  user-select: none;
+  background-color: #070b14;
+}
+
+/* Scrollbar estilizada */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0c1220;
+}
+::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #334155;
+}

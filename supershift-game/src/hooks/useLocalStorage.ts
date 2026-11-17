@@ -1,0 +1,27 @@
+import { useState, useEffect } from 'react';
+
+export function useLocalStorage<T>(key: string, initialValue: T): [T, (value: T | ((val: T) => T)) => void] {
+  const [storedValue, setStoredValue] = useState<T>(() => {
+    try {
+      let item = window.localStorage.getItem(key);
+      if (!item && key.startsWith('supershift_')) {
+        const legacyKey = key.replace('supershift_', 'super_miguel_');
+        item = window.localStorage.getItem(legacyKey);
+      }
+      return item ? JSON.parse(item) : initialValue;
+    } catch (error) {
+      console.warn(`Erro ao ler localStorage chave "${key}":`, error);
+      return initialValue;
+    }
+  });
+
+  useEffect(() => {
+    try {
+      window.localStorage.setItem(key, JSON.stringify(storedValue));
+    } catch (error) {
+      console.warn(`Erro ao salvar no localStorage chave "${key}":`, error);
+    }
+  }, [key, storedValue]);
+
+  return [storedValue, setStoredValue];
+}
